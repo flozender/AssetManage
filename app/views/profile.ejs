@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <style>
+
+                * 
+                {
+                  box-sizing: border-box;
+                }
+
+                body{
+                             background: #0d1521;
+                             font-family: tahoma;
+                                 color: #989898;
+                        }
+                
+                .columns {
+                  float: left;
+                  width: 33.3%;
+                  padding: 8px;
+                }
+                
+                .price {
+                  list-style-type: none;
+                  border: 1px solid #eee;
+                  margin: 0;
+                  padding: 0;
+                  -webkit-transition: 0.3s;
+                  transition: 0.3s;
+                }
+                
+                .price:hover {
+                  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+                }
+                
+                .price .header {
+                  background-color: #111;
+                  color: white;
+                  font-size: 25px;
+                }
+                
+                .price li {
+                  border-bottom: 1px solid #eee;
+                  padding: 20px;
+                  text-align: center;
+                }
+                
+                .price .grey {
+                  background-color: #eee;
+                  font-size: 20px;
+                }
+                
+                .button {
+                  background-color: #4CAF50;
+                  border: none;
+                  color: white;
+                  padding: 10px 25px;
+                  text-align: center;
+                  text-decoration: none;
+                  font-size: 18px;
+                }
+                
+                @media only screen and (max-width: 600px) {
+                  .columns {
+                    width: 100%;
+                  }
+                }
+
+                
+                </style>
+                </head>
+                <body>
+                
+                  <h1>Asset Management</h1>
+                  <br><br><br><br>
+                
+
+                <h2 style="text-align:center">Asset Owned By You</h2>
+                <p style="text-align:center"></p>
+                
+                <div class="columns">
+                  <ul class="price">
+                    <li class="header" style="background-color:rgb(76, 144, 175)">Asset 1</li>
+                    <li class="grey">AssetID</li>
+                  <li>Value</li>
+                
+                  <li class="grey"><a href="#" class="button">Sell</a></li>
+                  </ul>
+                </div>
+                
+                <div class="columns">
+                  <ul class="price">
+                  <li class="header" style="background-color:rgb(76, 144, 175)">Asset 2</li>
+                  <li class="grey">AssetID</li>
+                  <li>Value</li>
+                  
+                  <li class="grey"><a href="#" class="button">Sell</a></li>
+                  </ul>
+                </div>
+                
+                <div class="columns">
+                  <ul class="price">
+                    <li class="header" style="background-color:rgb(76, 144, 175)">Asset 3</li>
+                    <li class="grey">AssetID</li>
+                  <li>Value</li>
+                  
+                  <li class="grey"><a href="#" class="button">Sell</a></li>
+                  </ul>
+                </div>
+                
+                <style>
+                  .button {
+                    padding: 15px 25px;
+                    font-size: 24px;
+                    text-align: center;
+                    cursor: pointer;
+                    outline: none;
+                    color: #fff;
+                    background-color: rgb(76, 144, 175);
+                    border: none;
+                    border-radius: 15px;
+                    box-shadow: 0 9px #999;
+                  }
+                  
+                  .button:hover {background-color: #3e8e41}
+                  
+                  .button:active {
+                    background-color: #3e8e41;
+                    box-shadow: 0 5px #666;
+                    transform: translateY(4px);
+                  }
+
+                  * {box-sizing: border-box;}
+
+/* Style the input container */
+.input-container {
+  display: flex;
+  width: 50%;
+  margin-bottom: 15px;
+}
+
+/* Style the form icons */
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+/* Style the input fields */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+                  </style>
+                  
+                <center>
+                    <h1>Marketplace</h1>
+                    <br><br><br><br><br>
+                  <a href="buy"><button class="button" value="Buy">Buy</button></a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+
+                  <form action="/action_page.php">
+                    <h2>Transfer the Asset</h2>
+                    <div class="input-container">
+                      <i class="fa fa-user icon"></i>
+                      <input class="input-field" type="text" placeholder="User ID" name="usrid">
+                    </div>
+                  
+                    <div class="input-container">
+                      <i class="fa fa-cubes icon"></i>
+                      <input class="input-field" type="text" placeholder="AssetID" name="astid">
+                    </div>
+                  
+                    <div class="input-container">
+                      <i class="fa fa-key icon"></i>
+                      <input class="input-field" type="password" placeholder="Secret Key" name="psw">
+                    </div>
+                  
+                    <button type="submit" class="btn">Transfer</button>
+                  </form>
+
+                  
+                
+                </center> 
+
+                
+
+                             
+                </body>
+</html>

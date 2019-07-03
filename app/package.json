@@ -1,0 +1,16 @@
+{
+  "name": "asset-mgmt-app",
+  "version": "1.0.0",
+  "description": "Nodejs application for the Asset Management blockchain",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tayeeb",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "request": "^2.88.0"
+  }
+}

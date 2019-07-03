@@ -1,0 +1,52 @@
+name: "AssetManagement"
+x-type: "hlfv1"
+description: "Asset Management through blockchain."
+version: "1.0"
+
+channels:
+  mychannel:
+    orderers:
+      - orderer.com
+    peers:
+      nd-IYDQPVKGCJFZ5KCVIFOQG35OYE:
+        endorsingPeer: true
+        chaincodeQuery: true
+        ledgerQuery: true
+        eventSource: true
+
+organizations:
+  m-JUD7OJHWOVFRFPO3WFUCO24VWI:
+    mspid: m-JUD7OJHWOVFRFPO3WFUCO24VWI
+    peers:
+      - nd-IYDQPVKGCJFZ5KCVIFOQG35OYE
+    certificateAuthorities:
+      - ca-m-JUD7OJHWOVFRFPO3WFUCO24VWI
+
+orderers:
+  orderer.com:
+    url: grpcs://orderer.n-x7qv7l4wl5balhebuhshqr2dui.managedblockchain.us-east-1.amazonaws.com:30001
+    grpcOptions:
+      ssl-target-name-override: orderer.n-x7qv7l4wl5balhebuhshqr2dui.managedblockchain.us-east-1.amazonaws.com
+    tlsCACerts:
+      path: /home/ec2-user/managedblockchain-tls-chain.pem
+
+peers:
+  nd-IYDQPVKGCJFZ5KCVIFOQG35OYE:
+    url: grpcs://nd-iydqpvkgcjfz5kcvifoqg35oye.m-jud7ojhwovfrfpo3wfuco24vwi.n-x7qv7l4wl5balhebuhshqr2dui.managedblockchain.us-east-1.amazonaws.com:30003
+    eventUrl: grpcs://nd-iydqpvkgcjfz5kcvifoqg35oye.m-jud7ojhwovfrfpo3wfuco24vwi.n-x7qv7l4wl5balhebuhshqr2dui.managedblockchain.us-east-1.amazonaws.com:30004
+    grpcOptions:
+      ssl-target-name-override: nd-iydqpvkgcjfz5kcvifoqg35oye.m-jud7ojhwovfrfpo3wfuco24vwi.n-x7qv7l4wl5balhebuhshqr2dui.managedblockchain.us-east-1.amazonaws.com
+    tlsCACerts:
+      path: /home/ec2-user/managedblockchain-tls-chain.pem
+
+certificateAuthorities:
+  ca-m-JUD7OJHWOVFRFPO3WFUCO24VWI:
+    url: https://ca.m-jud7ojhwovfrfpo3wfuco24vwi.n-x7qv7l4wl5balhebuhshqr2dui.managedblockchain.us-east-1.amazonaws.com:30002
+    httpOptions:
+      verify: false
+    tlsCACerts:
+      path: /home/ec2-user/managedblockchain-tls-chain.pem
+    registrar:
+      - enrollId: mc1admin
+        enrollSecret: MC1pass$
+    caName: m-JUD7OJHWOVFRFPO3WFUCO24VWI

@@ -1,0 +1,16 @@
+{
+    "host":"localhost",
+    "port":"3000",
+    "channelName":"mychannel",
+    "chaincodeName":"actchain-test",
+    "eventWaitTime":"30000",
+    "peers":[
+        "nd-IYDQPVKGCJFZ5KCVIFOQG35OYE"
+    ],
+    "admins":[
+       {
+          "username":"mc1admin",
+          "secret":"MC1pass$"
+       }
+    ]
+ }

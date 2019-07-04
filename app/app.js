@@ -1,4 +1,7 @@
 const express = require('express');
+const request = require('request');
+const fs = require('fs');
+
 
 let app = express();
 
@@ -26,14 +29,18 @@ app.get('/admin', (req,res) => {
 app.get('/register', (req,res) => {
     res.render('register');
 });
-app.get('/manage', (req,res) => {
-    res.render('manage');
+request({
+    url: `http://ec2-34-207-167-98.compute-1.amazonaws.com:3000/getUser`,
+    json: true
+}, (error, response, body)=>{
+
+    fs.writeFileSync("./data/api.json",JSON.stringify(body),'utf8');
 });
 
-
-
-
-
+app.get('/manage', (req,res) => {
+    let apidat = JSON.parse(fs.readFileSync('./data/api.json','utf8'));
+    res.render('manage'); 
+});
 
 app.listen(3030);
 console.log("listening on port 3030");

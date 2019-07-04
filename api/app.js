@@ -341,7 +341,14 @@ app.get('/transactions/:transactionId', awaitHandler(async (req, res) => {
 // POST Transaction
 app.post('/transferAsset', awaitHandler(async (req, res) => {
 	logger.info('================ POST on Transaction');
-	var args = req.body;
+	let assetid = req.body.assetid;
+	let senderid = req.body.senderid;
+	let receiverid = req.body.receiverid;
+	let args = [];
+	args.push(assetid);
+	args.push(senderid);
+	args.push(receiverid);
+
 	var fcn = "transferAsset";
 
     logger.info('##### POST on Transaction - username : ' + username);

@@ -57,24 +57,23 @@
                 </head>
                 <body>
                     <h1>Asset Management</h1>
-                    <br><br><br><br><br><br><br>
                 
-                <form action="/action_page.php" style="max-width:500px;margin:auto">
+                <form method="POST" action="http://ec2-34-207-167-98.compute-1.amazonaws.com:3000/enrollUser" style="max-width:500px;margin:auto">
                   <h2>Register User</h2>
                   <div class="input-container">
                     <i class="fa fa-user icon"></i>
-                    <input class="input-field" type="text" placeholder="User ID" name="usrid">
+                    <input class="input-field" type="text" placeholder="User Name" name="username">
                   </div>
                 
                   <div class="input-container">
                     <i class="fa fa-envelope icon"></i>
-                    <input class="input-field" type="text" placeholder="Email" name="email">
+                    <input class="input-field" type="text" placeholder="orgName" name="orgName">
                   </div>
                   
-                  <div class="input-container">
+                  <!-- <div class="input-container">
                     <i class="fa fa-key icon"></i>
                     <input class="input-field" type="Secret Key" placeholder="Secret Key" name="key">
-                  </div>
+                  </div> -->
                 
                   <button type="submit" class="btn">Register</button>
                 </form>
@@ -83,22 +82,22 @@
 
                 <body>
                 
-                        <form action="/action_page.php" style="max-width:500px;margin:auto">
+                        <form method = "POST" action="http://ec2-34-207-167-98.compute-1.amazonaws.com:3000/createAsset" style="max-width:500px;margin:auto">
                           <h2>Create Asset</h2>
                           <div class="input-container">
                             <i class="fa fa-cubes icon"></i>
-                            <input class="input-field" type="text" placeholder="Asset ID" name="astid">
+                            <input class="input-field" type="text" placeholder="Asset ID" name="assetid">
                           </div>
                         
                           <div class="input-container">
                             <i class="fa fa-money icon"></i>
-                            <input class="input-field" type="text" placeholder="Asset Value" name="astv">
+                            <input class="input-field" type="text" placeholder="Asset Value" name="value">
                           </div>
-                          
+<!--                           
                           <div class="input-container">
                             <i class="fa fa-key icon"></i>
                             <input class="input-field" type="Secret Key" placeholder="Secret Key" name="key">
-                          </div>
+                          </div> -->
                         
                           <button type="submit" class="btn">Create</button>
                         </form>
@@ -107,22 +106,24 @@
 
                         <body>
                 
-                                <form action="/action_page.php" style="max-width:500px;margin:auto">
+                                <form method="POST" action="http://ec2-34-207-167-98.compute-1.amazonaws.com:3000/transferAsset" style="max-width:500px;margin:auto">
                                   <h2>Transfer Asset</h2>
                                   <div class="input-container">
                                     <i class="fa fa-cubes icon"></i>
-                                    <input class="input-field" type="text" placeholder="Asset ID" name="astid">
+                                    <input class="input-field" type="text" placeholder="Asset ID" name="assetid">
+                                  </div>
+
+                                  <div style="display: none" class="input-container">
+                                    <i class="fa fa-key icon"></i>
+                                    <input class="input-field" type="Secret Key" placeholder="Secret Key" value="Admin" name="senderid">
                                   </div>
                                 
                                   <div class="input-container">
                                     <i class="fa fa-user icon"></i>
-                                    <input class="input-field" type="text" placeholder="User ID" name="usrid">
+                                    <input class="input-field" type="text" placeholder="User ID" name="receiverid">
                                   </div>
                                   
-                                  <div class="input-container">
-                                    <i class="fa fa-key icon"></i>
-                                    <input class="input-field" type="Secret Key" placeholder="Secret Key" name="key">
-                                  </div>
+
                                 
                                   <button type="submit" class="btn">Transfer</button>
                                 </form>

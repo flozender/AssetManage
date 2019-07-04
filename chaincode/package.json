@@ -1,13 +1,13 @@
 {
 	"name": "dash",
 	"version": "0.0.2",
-	"description": "actchain dash.js",
+	"description": "Asset Management on the cloud",
 	"engines": {
 		"node": ">=8.4.0",
 		"npm": ">=5.3.0"
 	},
 	"scripts": {
-		"start": "node dash-cc.js"
+		"start": "node asset.js"
 	},
 	"engine-strict": true,
 	"license": "Apache-2.0",
